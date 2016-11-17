@@ -1,0 +1,17 @@
+--color
+--type-set=builder=.builder
+--type-set=scss=.scss
+--type-set=coffee=.coffee
+--type-set=haml=.haml
+--type-set=java=.java
+--ignore-file=match:.log
+--ignore-file=match:min.js
+--ignore-file=match:.sql
+--ignore-file=match:coverage*
+--ignore-file=match:tags
+--pager
+
+--ignore-dir=log
+--ignore-dir=tmp
+--ignore-dir=coverage
+--ignore-dir=node_modules
