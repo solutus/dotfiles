@@ -14,6 +14,7 @@
     ln -s ~/.dotfiles/.gemrc ~/.gemrc
     ln -s ~/.dotfiles/.tmux.conf ~/.tmux.conf
     ln -s ~/.dotfiles/tmuxinator.bash ~/bin/tmuxinator.bash
+    ln -s ~/.dotfiles/.bash ~/.bash
 
 ## Vim
 
