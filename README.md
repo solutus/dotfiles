@@ -1,8 +1,16 @@
 # dotfiles
 
-## Setup
-    git clone git://github.com/araslanov-e/dotfiles ~/.dotfiles
+## Zsh
+
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+## Ack
+
     sudo apt-get install ack-grep
+
+## configs
+
+    git clone git://github.com/araslanov-e/dotfiles ~/.dotfiles
     git clone https://github.com/gmarik/vundle.git ~/.dotfiles/.vim/bundle/vundle
 
     mkdir -p ~/bin/
