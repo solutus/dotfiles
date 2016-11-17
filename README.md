@@ -24,8 +24,6 @@
     ln -s ~/.dotfiles/.tmux.conf ~/.tmux.conf
     ln -s ~/.dotfiles/tmuxinator.bash ~/bin/tmuxinator.bash
 
-    mv ~/.vim/bundle/vim-colors-solarized/colors/solarized.vim  ~/.vim/colors/
-
 ## Vim
 
 Launch vim and make
@@ -34,7 +32,7 @@ Launch vim and make
 
 Exit and copy solarized scheme to .vim/colors
 
-    mv ~/.vim/bundle/vim-colors-solarized/colors/solarized.vim  ~/.vim/colors/
+    cp ~/.vim/bundle/vim-colors-solarized/colors/solarized.vim  ~/.vim/colors/
 
 ## Reload .bashrc
 
