@@ -1,11 +1,11 @@
 # dotfiles
 
-## Zsh
+## zsh
 
     sudo apt-get install zsh
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
-## Ack
+## ack
 
     sudo apt-get install ack-grep
 
@@ -24,16 +24,16 @@
     ln -s ~/.dotfiles/.tmux.conf ~/.tmux.conf
     ln -s ~/.dotfiles/tmuxinator.bash ~/bin/tmuxinator.bash
 
-## Vim
+## vim
 
 Launch vim and make
 
     BundleInstall
 
-Exit and copy solarized scheme to .vim/colors
+Exit and create link to solarized scheme to .vim/colors
 
-    cp ~/.vim/bundle/vim-colors-solarized/colors/solarized.vim  ~/.vim/colors/
+    ln -s ~/.vim/bundle/vim-colors-solarized/colors/solarized.vim  ~/.vim/colors/solarized.vim
 
-## Reload .bashrc
+## reload .bashrc
 
     . ~/.bashrc

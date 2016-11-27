@@ -91,6 +91,7 @@ let g:ctrlp_custom_ignore = {
     \ 'link': 'SOME_BAD_SYMBOLIC_LINKS',
     \ }
 let g:ctrlp_max_files=0
+let g:ctrlp_dotfiles=1
 
 " Plugin 'airblade/vim-gitgutter'
 Plugin 'https://github.com/altercation/vim-colors-solarized.git'
@@ -109,6 +110,7 @@ set tags=tags,./tags
 
 
 Bundle 'tpope/vim-rails'
+Plugin 'lucapette/vim-ruby-doc'
 
 Plugin 'elixir-lang/vim-elixir'
 syntax on
