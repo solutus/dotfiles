@@ -80,6 +80,8 @@ Bundle 'scrooloose/nerdtree'
 " nmap <leader>ne :NERDTree<cr>
 map <leader>r :NERDTreeFind<cr>
 
+Bundle 'jwhitley/vim-matchit'
+
 "Plugin 'Xuyuanp/nerdtree-git-plugin'
 "set shell=sh
 set shell=zsh
