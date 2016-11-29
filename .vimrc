@@ -88,7 +88,7 @@ set shell=zsh
 
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " Linux/MacOSX
 let g:ctrlp_custom_ignore = {
-    \ 'dir':  '\v[\/]\.(git|hg|svn)$',
+    \ 'dir':  '\v[\/]\.(git|hg|svn)|node_modules$',
     \ 'file': '\v\.(exe|so|dll|log)$',
     \ 'link': 'SOME_BAD_SYMBOLIC_LINKS',
     \ }
@@ -114,6 +114,7 @@ set tags=tags,./tags
 Bundle 'tpope/vim-rails'
 Plugin 'lucapette/vim-ruby-doc'
 
+Plugin 'elixir-lang/vim-elixir'
 syntax on
 nnoremap <F5> :buffers<CR>:buffer<Space>
 let g:gitgutter_eager = 0
@@ -130,7 +131,7 @@ autocmd FileType make setlocal noexpandtab
 
 
 " replace trailing whitespaces
-autocmd BufWritePre *.rb,*.erb,*.haml,*.js,*.coffee,*.css,*.scss,*.builder,*.cc,*c,*.cpp,*.h,*.hh,*.hpp,*.md :%s/\s\+$//e
+autocmd BufWritePre *.rb,*.erb,*.haml,*.js,*.coffee,*.css,*.scss,*.builder,*.cc,*c,*.cpp,*.h,*.hh,*.hpp,*.md,*.ex,*.eex :%s/\s\+$//e
 
 " GVIM options
 set guioptions-=m  "remove menu bar
