@@ -44,6 +44,7 @@ set nocompatible               " be iMproved
 set incsearch
 set hlsearch
 "set number
+"set relativenumber
 "set tabstop=2 shiftwidth=2 expandtab
 set autoindent
 "set smartindent
@@ -66,11 +67,11 @@ let g:solarized_termcolors = 256
 let g:solarized_visibility = "high"
 let g:solarized_contrast = "high"
 colorscheme solarized
-"colorscheme smyck
+" colorscheme smyck
 
 " set clipboard=unnamedplus
-set clipboard=unnamed
-set clipboard+=unnamedplus
+" set clipboard=unnamed
+set clipboard=unnamedplus
 filetype off                   " required!
 
 " own bundles
@@ -112,9 +113,13 @@ set tags=tags,./tags
 
 
 Bundle 'tpope/vim-rails'
+Bundle 'tpope/vim-commentary'
 Plugin 'lucapette/vim-ruby-doc'
 
 Plugin 'elixir-lang/vim-elixir'
+Plugin 'janko-m/vim-test'
+Plugin 'isRuslan/vim-es6'
+
 syntax on
 nnoremap <F5> :buffers<CR>:buffer<Space>
 let g:gitgutter_eager = 0
