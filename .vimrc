@@ -66,8 +66,9 @@ endif
 let g:solarized_termcolors = 256
 let g:solarized_visibility = "high"
 let g:solarized_contrast = "high"
-colorscheme solarized
+" colorscheme solarized
 " colorscheme smyck
+colorscheme darkblue
 
 " set clipboard=unnamedplus
 " set clipboard=unnamed
@@ -136,7 +137,7 @@ autocmd FileType make setlocal noexpandtab
 
 
 " replace trailing whitespaces
-autocmd BufWritePre *.rb,*.erb,*.haml,*.js,*.coffee,*.css,*.scss,*.builder,*.cc,*c,*.cpp,*.h,*.hh,*.hpp,*.md,*.ex,*.eex :%s/\s\+$//e
+autocmd BufWritePre *.yml,*.go,*.rb,*.erb,*.haml,*.js,*.coffee,*.css,*.scss,*.builder,*.cc,*c,*.cpp,*.h,*.hh,*.hpp,*.md,*.ex,*.eex :%s/\s\+$//e
 
 " GVIM options
 set guioptions-=m  "remove menu bar
