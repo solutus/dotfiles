@@ -21,6 +21,7 @@
     ln -s ~/.dotfiles/.vimrc ~/.vimrc
     ln -s ~/.dotfiles/.ackrc ~/.ackrc
     ln -s ~/.dotfiles/.gemrc ~/.gemrc
+    ln -s ~/.dotfiles/.gitignore ~/.gitignore
     ln -s ~/.dotfiles/.tmux.conf ~/.tmux.conf
     ln -s ~/.dotfiles/tmuxinator.bash ~/bin/tmuxinator.bash
 
@@ -37,3 +38,7 @@ Exit and create link to solarized scheme to .vim/colors
 ## reload .bashrc
 
     . ~/.bashrc
+
+## setup global .gitignore
+
+git config --global core.excludesfile ~/.gitignore
