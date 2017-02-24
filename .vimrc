@@ -44,6 +44,7 @@ set nocompatible               " be iMproved
 set incsearch
 set hlsearch
 "set number
+"set relativenumber
 "set tabstop=2 shiftwidth=2 expandtab
 set autoindent
 "set smartindent
@@ -65,12 +66,13 @@ endif
 let g:solarized_termcolors = 256
 let g:solarized_visibility = "high"
 let g:solarized_contrast = "high"
-colorscheme solarized
-"colorscheme smyck
+" colorscheme solarized
+" colorscheme smyck
+colorscheme darkblue
 
 " set clipboard=unnamedplus
-set clipboard=unnamed
-set clipboard+=unnamedplus
+" set clipboard=unnamed
+set clipboard=unnamedplus
 filetype off                   " required!
 
 " own bundles
@@ -79,6 +81,8 @@ Plugin 'kien/ctrlp.vim'
 Bundle 'scrooloose/nerdtree'
 " nmap <leader>ne :NERDTree<cr>
 map <leader>r :NERDTreeFind<cr>
+
+Bundle 'jwhitley/vim-matchit'
 
 "Plugin 'Xuyuanp/nerdtree-git-plugin'
 "set shell=sh
@@ -110,9 +114,13 @@ set tags=tags,./tags
 
 
 Bundle 'tpope/vim-rails'
+Bundle 'tpope/vim-commentary'
 Plugin 'lucapette/vim-ruby-doc'
 
 Plugin 'elixir-lang/vim-elixir'
+Plugin 'janko-m/vim-test'
+Plugin 'isRuslan/vim-es6'
+
 syntax on
 nnoremap <F5> :buffers<CR>:buffer<Space>
 let g:gitgutter_eager = 0
@@ -129,7 +137,7 @@ autocmd FileType make setlocal noexpandtab
 
 
 " replace trailing whitespaces
-autocmd BufWritePre *.rb,*.erb,*.haml,*.js,*.coffee,*.css,*.scss,*.builder,*.cc,*c,*.cpp,*.h,*.hh,*.hpp,*.md,*.ex,*.eex :%s/\s\+$//e
+autocmd BufWritePre *.yml,*.go,*.rb,*.erb,*.haml,*.js,*.coffee,*.css,*.scss,*.builder,*.cc,*c,*.cpp,*.h,*.hh,*.hpp,*.md,*.ex,*.eex :%s/\s\+$//e
 
 " GVIM options
 set guioptions-=m  "remove menu bar
