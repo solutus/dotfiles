@@ -11,7 +11,7 @@
 
 ## configs
 
-    git clone git://github.com/araslanov-e/dotfiles ~/.dotfiles
+    git clone git://github.com/solutus/dotfiles ~/.dotfiles
     git clone https://github.com/gmarik/vundle.git ~/.dotfiles/.vim/bundle/vundle
 
     mkdir -p ~/bin/
