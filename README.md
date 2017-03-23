@@ -15,6 +15,7 @@
     git clone https://github.com/gmarik/vundle.git ~/.dotfiles/.vim/bundle/vundle
 
     mkdir -p ~/bin/
+    mkdir -p ~/.vim/colors
 
     ln -s ~/.dotfiles/.bashrc ~/.bashrc
     ln -s ~/.dotfiles/.vim ~/.vim
