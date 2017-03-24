@@ -1,5 +1,9 @@
 # dotfiles
 
+## programs
+
+sudo apt install guake git zsh ack-grep vim
+
 ## zsh
 
     sudo apt-get install zsh
