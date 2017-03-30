@@ -1,5 +1,9 @@
 # dotfiles
 
+## programs
+
+    sudo apt install guake git zsh ack-grep vim
+
 ## zsh
 
     sudo apt-get install zsh
@@ -11,10 +15,11 @@
 
 ## configs
 
-    git clone git://github.com/araslanov-e/dotfiles ~/.dotfiles
+    git clone git://github.com/solutus/dotfiles ~/.dotfiles
     git clone https://github.com/gmarik/vundle.git ~/.dotfiles/.vim/bundle/vundle
 
     mkdir -p ~/bin/
+    mkdir -p ~/.vim/colors
 
     ln -s ~/.dotfiles/.bashrc ~/.bashrc
     ln -s ~/.dotfiles/.vim ~/.vim
