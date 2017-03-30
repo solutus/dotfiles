@@ -86,3 +86,7 @@ source $ZSH/oh-my-zsh.sh
 
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+
+# rake doesn't work otherwise
+# http://mikeballou.com/blog/2011/07/18/zsh-and-rake-parameters/
+alias rake='noglob rake'
