@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-  export ZSH=$PATH/.oh-my-zsh
+  export ZSH=/home/sstaskov/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -85,8 +85,29 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 
+# tmuxinator configs
+export EDITOR='vim'
+source ~/bin/tmuxinator.zsh
+
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
-# rake doesn't work otherwise
-# http://mikeballou.com/blog/2011/07/18/zsh-and-rake-parameters/
+export GOPATH=$HOME/apps/golang
+export PATH=$PATH:$GOPATH/bin
+
+function fixssh {
+  for key in SSH_AUTH_SOCK SSH_CONNECTION SSH_CLIENT; do
+    if (tmux show-environment | grep "^${key}" > /dev/null); then
+      value=`tmux show-environment | grep "^${key}" | sed -e "s/^[A-Z_]*=//"`
+      export ${key}="${value}"
+    fi
+  done
+}
+
+# Launch SSH agent if not running
+if ! ps aux |grep $(whoami) |grep ssh-agent |grep -v grep >/dev/null; then ssh-agent ; fi
+
+# Link the latest ssh-agent socket
+ln -sf $(find /tmp -maxdepth 2 -type s -name "agent*" -user $USER -printf '%T@ %p\n' 2>/dev/null |sort -n|tail -1|cut -d' ' -f2) ~/.ssh/ssh_auth_sock
+
+export SSH_AUTH_SOCK=~/.ssh/ssh_auth_sock
 alias rake='noglob rake'
