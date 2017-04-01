@@ -28,7 +28,7 @@
     ln -s ~/.dotfiles/.gemrc ~/.gemrc
     ln -s ~/.dotfiles/.gitignore ~/.gitignore
     ln -s ~/.dotfiles/.tmux.conf ~/.tmux.conf
-    ln -s ~/.dotfiles/tmuxinator.bash ~/bin/tmuxinator.bash
+    ln -s ~/.dotfiles/tmuxinator.zsh ~/bin/tmuxinator.zsh
 
 ## vim
 
